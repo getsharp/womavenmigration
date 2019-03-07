@@ -171,7 +171,7 @@ fi
 
 # update path references in .eogen files
 echo "Finding .eogen files in src/main/resources and changing path references to new structure"
-find src/main/resources/ -name *.eogen \
+find src/main/resources -name *.eogen \
 -exec sed -i '' 's/destination\ Sources/destination\ src\/main\/java/' {} \; \
 -exec sed -i '' 's/subclassDestination\ Sources/subclassDestination\ src\/main\/java/' {} \; \
 -exec sed -i '' 's/model\ Resources/model\ src\/main\/resources/' {} \; \

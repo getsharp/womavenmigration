@@ -141,9 +141,9 @@ sed -i '' s/PROJECT_NAME/$PROJECT_NAME/ pom.xml
 echo "Replacing wonder.version placeholder with $WONDER_VERSION"
 sed -i '' s/WONDER_VERSION/$WONDER_VERSION/ pom.xml
 
-if [[ $PROJECT_TYPE != 'application' ]]; then
+if [[ "$PROJECT_TYPE" != *"application"* ]]; then
   echo "Removing <packaging>woapplication</packaging> from pom.xml"
-  sed -i '' 's/<packaging>woapplication<\/packaging>//' pom.xml
+  sed -i '' 's/<packaging>woapplication<\/packaging>/<packaging>woframework<\/packaging>/' pom.xml
 fi
 
 echo

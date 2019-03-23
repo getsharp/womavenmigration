@@ -1,6 +1,6 @@
 # WOnder Maven Migrator
 
-A Bash script that attempts to convert WebObjects/WOnder Fluffy Bunny projects to a Maven projects based on https://gist.github.com/hugith/e9a49e91fbcebe204e0feb4989f55631 (https://github.com/hugith) and https://gist.github.com/paulhoadley/cd15b90c94eb8c640fddd9ac3fbbc6dc (https://github.com/paulhoadley)
+A Bash script that attempts to convert a WebObjects/WOnder Fluffy Bunny project to a Maven project based on https://gist.github.com/hugith/e9a49e91fbcebe204e0feb4989f55631 (https://github.com/hugith) and https://gist.github.com/paulhoadley/cd15b90c94eb8c640fddd9ac3fbbc6dc (https://github.com/paulhoadley)
 
 ### Overview
 

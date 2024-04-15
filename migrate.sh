@@ -89,7 +89,7 @@ echo $ARTIFACT_ID
 echo
 
 # set a WOnder default version
-DEFAULT_WONDER_VERSION="7.1-SNAPSHOT"
+DEFAULT_WONDER_VERSION="7.4"
 
 # prompt for WOnder version
 read -p "pom.xml Wonder version [$DEFAULT_WONDER_VERSION]: " WONDER_VERSION
@@ -105,6 +105,13 @@ cp $NEW_PROJECT .
 echo "Replacing project name placeholder with $PROJECT_NAME"
 sed -i '' s/PROJECT_NAME/$PROJECT_NAME/ .project
 echo
+
+# replace the project name wolips nature for framework
+if [[ "$PROJECT_TYPE" != *"application"* ]]; then
+	echo "Replacing project wolips nature for frameworks"
+	sed -i '' s/incrementalapplicationnature/incrementalframeworknature/ .project
+	echo
+fi
 
 # change the classes.dir build property
 echo "Changing build.properties classes.dir value to target/classes"
